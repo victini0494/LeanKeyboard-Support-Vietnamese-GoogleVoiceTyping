@@ -22,6 +22,7 @@ import android.speech.SpeechRecognizer;
 import android.text.InputType;
 import android.text.TextUtils;
 import android.util.Log;
+import android.view.KeyEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.ViewGroup.MarginLayoutParams;
@@ -39,6 +40,8 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.RelativeLayout.LayoutParams;
+import android.widget.TextView;
+
 import androidx.core.content.ContextCompat;
 import com.liskovsoft.leankeyboard.addons.keyboards.KeyboardManager.KeyboardData;
 import com.liskovsoft.leankeyboard.addons.theme.ThemeManager;
@@ -1238,8 +1241,16 @@ public class LeanbackKeyboardContainer {
             suggestion.setContentDescription(suggestions.get(oldCount));
 
             if (oldCount == 0) {
-                suggestion.setEnabled(false);
                 suggestion.setOnClickListener(null);
+                suggestion.setOnKeyListener((v, keyCode, event) -> {
+                    if ((keyCode == KeyEvent.KEYCODE_DPAD_CENTER || keyCode == KeyEvent.KEYCODE_ENTER)
+                            && event.getAction() == KeyEvent.ACTION_DOWN) {
+                        return true;
+                    }
+                    return false;
+                });
+                suggestion.setFocusable(true);
+                suggestion.setClickable(true);
             } else {
                 suggestion.setEnabled(true);
                 suggestion.setOnClickListener(v -> {
