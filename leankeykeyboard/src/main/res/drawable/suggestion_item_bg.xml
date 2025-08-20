@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Khi bấm -->
+    <item android:state_pressed="true">
+        <shape android:shape="rectangle">
+            <solid android:color="#33FFFFFF"/> <!-- nền mờ khi nhấn -->
+            <corners android:radius="999dp"/> <!-- bo tròn dạng viên thuốc -->
+        </shape>
+    </item>
+
+    <!-- Khi focus -->
+    <item android:state_focused="true">
+        <shape android:shape="rectangle">
+            <solid android:color="#55FFFFFF"/> <!-- nền sáng hơn khi focus -->
+            <stroke android:color="#FFFFFF" android:width="2dp"/> <!-- viền trắng -->
+            <corners android:radius="999dp"/>
+        </shape>
+    </item>
+
+    <!-- Mặc định -->
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="@android:color/transparent"/> <!-- nền trong suốt -->
+            <corners android:radius="999dp"/>
+        </shape>
+    </item>
+
+</selector>

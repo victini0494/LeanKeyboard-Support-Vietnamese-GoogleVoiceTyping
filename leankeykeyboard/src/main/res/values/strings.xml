@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="ime_name" translatable="false">LeanKeyboard</string>
+    <string name="ime_service_name" translatable="false">LeanKeyboard</string>
+    <string name="word_separators">" .,;:!?
+        ()[]*&amp;@{}/&lt;>_+=|"
+    </string>
+    <string name="label_go_key">Go</string>
+    <string name="label_next_key">Next</string>
+    <string name="label_send_key">Send</string>
+    <string name="label_search_key">Search</string>
+    <string name="label_done_key">Done</string>
+    <string name="settings_title">Keyboard Options</string>
+    <string name="title_movement_sensitivity">Movement sensitivity</string>
+    <string name="btn_on">On</string>
+    <string name="btn_off">Off</string>
+    <string name="subtype_generic">%s</string>
+    <string name="keyboardview_keycode_space">Space</string>
+    <string name="keyboardview_keycode_delete">Delete</string>
+    <string name="keyboardview_keycode_mode_change">Mode change</string>
+    <string name="keyboardview_keycode_shift">Shift</string>
+    <string name="keyboardview_keycode_lang">Language</string>
+    <string name="keyboardview_keycode_caps">Caps Lock</string>
+    <string name="keyboardview_keycode_left">Left</string>
+    <string name="keyboardview_keycode_right">Right</string>
+    <string name="keyboardview_keycode_voice">Voice Input</string>
+    <string name="keyboard_headset_required_to_hear_password">Plug in a headset to hear password keys spoken.</string>
+    <string name="keyboard_password_character_no_headset">Dot.</string>
+    <string name="language_dialog_title">Select additional layouts</string>
+    <string name="language_dialog_subtitle">To open dialog next time, long press on \'world\' button</string>
+    <string name="user_name">User Name</string>
+    <string name="email_id">Email</string>
+    <string name="kb_layout_desc">Keyboard Layout</string>
+    <string name="kb_layout">Layout</string>
+    <string name="kb_settings">Settings</string>
+    <string name="kb_settings_desc">Keyboard Settings</string>
+    <string name="activate_keyboard">Activate Keyboard</string>
+    <string name="change_layout">Change Layout</string>
+    <string name="enable_kb_in_system_prefs">You need to enable %s in System Preferences</string>
+    <string name="about">About</string>
+    <string name="about_desc">About Application</string>
+    <string name="keep_on_screen_desc">Keep it on screen while physical keyboard is active</string>
+    <string name="misc">Misc</string>
+    <string name="misc_desc">Misc Settings</string>
+    <string name="keep_on_screen">Keep on Screen</string>
+    <string name="keyboardview_keycode_clipboard">Clipboard</string>
+    <string name="increase_kbd_size">Enlarge keyboard</string>
+    <string name="increase_kbd_size_desc">Increase keyboard size</string>
+    <string name="kbd_activation_error2">Error occurred. Try to activate %s with commands below.\n\n%s\n\n%s</string>
+    <string name="about_donate">Donate</string>
+    <string name="about_web_site">Web Site</string>
+    <string name="kbd_activation_error">Can\'t open system kbd settings.\nRedirecting to site with manual instructions…</string>
+    <string name="about_issue">Submit an issue</string>
+    <string name="about_releases">Get a new version</string>
+    <string name="kb_theme">Theme</string>
+    <string name="kb_theme_desc">Keyboard Theme</string>
+    <string name="change_theme">Change Theme</string>
+    <string name="enable_suggestions">Enable suggestions</string>
+    <string name="enable_suggestions_desc">Enable suggestions row</string>
+    <string name="show_launcher_icon">Show icon</string>
+    <string name="show_launcher_icon_desc">Show launcher icon</string>
+    <string name="enable_cyclic_navigation">Сyclic navigation</string>
+    <string name="enable_cyclic_navigation_desc">Сyclic navigation through keyboard</string>
+</resources>

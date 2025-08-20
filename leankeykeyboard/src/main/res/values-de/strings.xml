@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="label_go_key">Los</string>
+    <string name="label_next_key">Weiter</string>
+    <string name="label_send_key">Senden</string>
+    <string name="label_search_key">Suchen</string>
+    <string name="label_done_key">Fertig</string>
+    <string name="settings_title">Tastaturoptionen</string>
+    <string name="title_movement_sensitivity">Bewegungsempfindlichkeit</string>
+    <string name="btn_on">An</string>
+    <string name="btn_off">Aus</string>
+    <string name="keyboardview_keycode_space">Leertaste</string>
+    <string name="keyboardview_keycode_delete">Löschen</string>
+    <string name="keyboardview_keycode_mode_change">Modusänderung</string>
+    <string name="keyboardview_keycode_shift">Shift</string>
+    <string name="keyboardview_keycode_caps">Feststelltaste</string>
+    <string name="keyboardview_keycode_left">Nach links</string>
+    <string name="keyboardview_keycode_right">Nach rechts</string>
+    <string name="keyboard_headset_required_to_hear_password">Schließen Sie ein Headset an, um das Passwort gesprochen zu hören.</string>
+    <string name="keyboard_password_character_no_headset">Punkt.</string>
+    <string name="kb_settings">Einstellungen</string>
+    <string name="kb_settings_desc">Tastatureinstellungen</string>
+    <string name="activate_keyboard">Tastatur aktivieren</string>
+    <string name="change_layout">Layout ändern</string>
+    <string name="kb_layout_desc">Tastaturlayout</string>
+    <string name="kb_layout">Layout</string>
+    <string name="about_desc">Über die Applikation</string>
+    <string name="about">Über</string>
+    <string name="enable_kb_in_system_prefs">Sie müssen %s in den Systemeinstellungen aktivieren</string>
+    <string name="keep_on_screen_desc">Auf dem Display einblenden, wenn die physische Tastatur aktiv ist</string>
+    <string name="keep_on_screen">Auf dem Display einblenden</string>
+    <string name="misc">Andere</string>
+    <string name="misc_desc">Andere Einstellungen</string>
+    <string name="increase_kbd_size">Vergrößern</string>
+    <string name="increase_kbd_size_desc">Die Tastatur vergrößern</string>
+    <string name="about_donate">Spenden</string>
+    <string name="about_issue">Ein Problem melden</string>
+    <string name="about_releases">Neue Version herunterladen</string>
+    <string name="kb_theme">Theme</string>
+    <string name="kb_theme_desc">Keyboard Theme</string>
+    <string name="change_theme">Thema ändern</string>
+    <string name="enable_suggestions">Vorschläge aktivieren</string>
+    <string name="enable_suggestions_desc">Vorschlagszeile aktivieren</string>
+    <string name="show_launcher_icon">Icon anzeigen</string>
+    <string name="show_launcher_icon_desc">Icon im Launcher anzeigen</string>
+</resources>

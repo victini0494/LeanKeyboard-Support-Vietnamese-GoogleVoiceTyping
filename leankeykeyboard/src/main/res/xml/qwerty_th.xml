@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Keyboard android:keyWidth="@dimen/key_width" android:keyHeight="@dimen/key_height" android:horizontalGap="@dimen/keyboard_horizontal_gap" android:verticalGap="@dimen/keyboard_vertical_gap"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Thai keyboard -->
+    <!-- https://en.wikipedia.org/wiki/Thai_(Unicode_block) -->
+    <Row android:rowEdgeFlags="top">
+        <Key android:keyEdgeFlags="left" android:keyLabel="ๆ|๑" />
+        <Key android:keyLabel="ภ|๒" />
+        <Key android:keyLabel="ถ|๓" />
+        <Key android:keyLabel="ุ|ู" />
+        <Key android:keyLabel="ึ|๔" />
+        <Key android:keyLabel="ค|๕" />
+        <Key android:keyLabel="ต|๖" />
+        <Key android:keyLabel="จ|๗" />
+        <Key android:keyLabel="ข|๘" />
+        <Key android:keyLabel="ช|๙" />
+        <Key android:codes="-5" android:keyEdgeFlags="right" android:keyLabel="@string/keyboardview_keycode_delete" android:keyIcon="@drawable/ic_ime_delete" />
+    </Row>
+    <Row>
+        <!-- NOTE: example of adding different chars to uppercase/lowercase states  -->
+        <!-- format is: android:keyLabel="lower_char|upper_char" e.g. android:keyLabel="ฝ|๒" -->
+        <Key android:keyLabel="ไ|๐" android:keyEdgeFlags="left" />
+        <Key android:keyLabel="ำ|ฎ" />
+        <Key android:keyLabel="พ|ฑ" />
+        <Key android:keyLabel="ะ|ธ" />
+        <Key android:keyLabel="ั|ํ" />
+        <Key android:keyLabel="ี|๊" />
+        <Key android:keyLabel="ร|ณ" />
+        <Key android:keyLabel="น|ฯ" />
+        <Key android:keyLabel="ย|ญ" />
+        <Key android:keyLabel="บ|ฐ" />
+        <Key android:keyLabel="ล|," android:keyEdgeFlags="right" />
+    </Row>
+    <Row>
+        <Key android:keyLabel="ฟ|ฤ" android:keyEdgeFlags="left" />
+        <Key android:keyLabel="ห|ฆ" />
+        <Key android:keyLabel="ก|ฏ" />
+        <Key android:keyLabel="ด|โ" />
+        <Key android:keyLabel="เ|ฌ" />
+        <Key android:keyLabel="้|็" />
+        <Key android:keyLabel="่|๋" />
+        <Key android:keyLabel="า|ษ" />
+        <Key android:keyLabel="ส|ศ" />
+        <Key android:keyLabel="ว|ซ" />
+        <Key android:keyLabel="ง|." android:keyEdgeFlags="right" />
+    </Row>
+    <Row>
+        <Key android:keyLabel="ผ|(" android:keyEdgeFlags="left" />
+        <Key android:keyLabel="ป|)" />
+        <Key android:keyLabel="แ|ฉ" />
+        <Key android:keyLabel="อ|ฮ" />
+        <Key android:keyLabel="ิ|ฺ" />
+        <Key android:keyLabel="ื|์" />
+        <Key android:keyLabel="ท|?" />
+        <Key android:keyLabel="ม|ฒ" />
+        <Key android:keyLabel="ใ|ฬ" />
+        <Key android:keyLabel="ฝ|ฦ" />
+        <Key android:keyLabel="ฃ|ฅ" android:keyEdgeFlags="right" />
+    </Row>
+    <Row android:rowEdgeFlags="bottom">
+        <Key android:codes="-2" android:keyEdgeFlags="left" android:keyLabel="@string/keyboardview_keycode_mode_change" android:keyIcon="@drawable/ic_ime_symbols" />
+        <Key android:codes="-1" android:keyLabel="@string/keyboardview_keycode_shift" android:keyIcon="@drawable/ic_ime_shift_off" />
+        <Key android:codes="-9" android:keyLabel="@string/keyboardview_keycode_lang" android:keyIcon="@drawable/ic_ime_world" />
+        <Key android:keyWidth="@dimen/space_key_width" android:codes="32" android:keyLabel="@string/keyboardview_keycode_space" android:keyIcon="@drawable/ic_ime_space" />
+        <Key android:codes="-7" android:keyLabel="@string/keyboardview_keycode_voice" android:keyIcon="@drawable/ic_ime_voice" />
+        <Key android:codes="-3" android:keyLabel="@string/keyboardview_keycode_left" android:keyIcon="@drawable/ic_ime_left_arrow" />
+        <Key android:codes="-4" android:keyEdgeFlags="right" android:keyLabel="@string/keyboardview_keycode_right" android:keyIcon="@drawable/ic_ime_right_arrow" />
+    </Row>
+</Keyboard>
