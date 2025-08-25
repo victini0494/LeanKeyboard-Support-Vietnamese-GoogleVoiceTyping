@@ -25,6 +25,6 @@ public class LeanbackSuggestionsFactory {
 
     public void clearSuggestions() {
         mSuggestions.clear();
-        mSuggestions.add(null);
+//        mSuggestions.add(null);
     }
 }

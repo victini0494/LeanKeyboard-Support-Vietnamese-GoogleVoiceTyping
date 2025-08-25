@@ -1221,7 +1221,7 @@ public class LeanbackKeyboardContainer {
     }
 
     public void updateSuggestions(ArrayList<String> suggestions) {
-        addUserInputToSuggestions(suggestions);
+//        addUserInputToSuggestions(suggestions);
 
         int oldCount = mSuggestions.getChildCount();
         int newCount = suggestions.size();
@@ -1240,39 +1240,26 @@ public class LeanbackKeyboardContainer {
             suggestion.setText(suggestions.get(oldCount));
             suggestion.setContentDescription(suggestions.get(oldCount));
 
-            if (oldCount == 0) {
-                suggestion.setOnClickListener(null);
-                suggestion.setOnKeyListener((v, keyCode, event) -> {
-                    if ((keyCode == KeyEvent.KEYCODE_DPAD_CENTER || keyCode == KeyEvent.KEYCODE_ENTER)
-                            && event.getAction() == KeyEvent.ACTION_DOWN) {
-                        return true;
-                    }
-                    return false;
-                });
-                suggestion.setFocusable(true);
-                suggestion.setClickable(true);
-            } else {
-                suggestion.setEnabled(true);
-                suggestion.setOnClickListener(v -> {
+            suggestion.setEnabled(true);
+            suggestion.setOnClickListener(v -> {
 
-                    v.requestFocus();
+                v.requestFocus();
 
-                    v.setPressed(true);
-                    v.refreshDrawableState();
+                v.setPressed(true);
+                v.refreshDrawableState();
 
-                    v.postDelayed(() -> {
-                        v.setPressed(false);
+                v.postDelayed(() -> {
+                    v.setPressed(false);
 
-                        String suggestionText = ((Button) v).getText().toString();
-                        mContext.handleTextEntry(
-                                InputListener.ENTRY_TYPE_SUGGESTION,
-                                LeanbackKeyboardView.NOT_A_KEY,
-                                suggestionText
-                        );
-                    }, 150);
+                    String suggestionText = ((Button) v).getText().toString();
+                    mContext.handleTextEntry(
+                            InputListener.ENTRY_TYPE_SUGGESTION,
+                            LeanbackKeyboardView.NOT_A_KEY,
+                            suggestionText
+                    );
+                }, 150);
 
-                });
-            }
+            });
         }
 
         if (getCurrFocus().type == KeyFocus.TYPE_SUGGESTION) {
@@ -1280,26 +1267,6 @@ public class LeanbackKeyboardContainer {
         }
 
         mThemeManager.updateSuggestionsTheme();
-    }
-    /**
-     * Useful for password fields
-     */
-    private void addUserInputToSuggestions(ArrayList<String> suggestions) {
-        InputConnection connection = mContext.getCurrentInputConnection();
-
-        if (connection != null) {
-            String editorText = LeanbackUtils.getEditorText(connection);
-
-            if (editorText.isEmpty()) {
-                editorText = mLabel;
-            }
-
-            if (suggestions.size() == 0) {
-                suggestions.add(editorText);
-            } else {
-                suggestions.set(0, editorText);
-            }
-        }
     }
 
     public void onLangKeyClick() {
