@@ -6,10 +6,10 @@ import android.database.sqlite.SQLiteDatabase;
 import android.util.Log;
 import com.readystatesoftware.sqliteasset.SQLiteAssetHelper;
 
-import java.text.Normalizer; // ✅ Thêm thư viện cần thiết
+import java.text.Normalizer;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.regex.Pattern; // ✅ Thêm thư viện cần thiết
+import java.util.regex.Pattern;
 
 
 public class DatabaseHelper extends SQLiteAssetHelper {
