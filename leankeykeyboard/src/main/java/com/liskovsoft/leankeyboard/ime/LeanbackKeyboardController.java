@@ -173,9 +173,6 @@ public class LeanbackKeyboardController implements LeanbackKeyboardContainer.Voi
                     // mContext.hideWindow(); // SmartYouTubeTV fix: force hide keyboard
                     return;
                 case KeyFocus.TYPE_SUGGESTION:
-                    if (focus.index == 0) {
-                        return;
-                    }
                     mInputListener.onEntry(InputListener.ENTRY_TYPE_SUGGESTION, 0, mContainer.getSuggestionText(focus.index));
                     return;
                 default:
