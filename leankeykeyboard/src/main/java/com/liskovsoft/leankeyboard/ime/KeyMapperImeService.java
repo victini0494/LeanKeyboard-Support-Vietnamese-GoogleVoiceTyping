@@ -7,6 +7,9 @@ import android.content.IntentFilter;
 import android.inputmethodservice.InputMethodService;
 import android.os.Build;
 import android.os.Build.VERSION;
+import android.os.Handler;
+import android.os.Looper;
+import android.text.TextUtils;
 import android.util.Log;
 import android.view.KeyEvent;
 import android.view.inputmethod.EditorInfo;
@@ -21,6 +24,7 @@ public class KeyMapperImeService extends InputMethodService {
     private static final String KEY_MAPPER_INPUT_METHOD_EXTRA_TEXT = BuildConfig.APPLICATION_ID + ".inputmethod.EXTRA_TEXT";
     private static final String KEY_MAPPER_INPUT_METHOD_EXTRA_KEY_EVENT = BuildConfig.APPLICATION_ID +  ".inputmethod.EXTRA_KEY_EVENT";
 
+    private final Handler mHandler = new Handler(Looper.getMainLooper());
 
     private static final String ACTION_VOICE_TO_TEXT = "inputmethod.ACTION_VOICE_TO_TEXT";
     private static final String EXTRA_VOICE_TO_TEXT = "inputmethod.EXTRA_VOICE_TO_TEXT";
@@ -47,10 +51,36 @@ public class KeyMapperImeService extends InputMethodService {
             switch (action) {
 
 
-                // get result from GoogleVoiceInputActivity and save result for later
+                // get result from GoogleVoiceInputActivity
                 case ACTION_VOICE_TO_TEXT:
                     String voiceToText = intent.getStringExtra(EXTRA_VOICE_TO_TEXT);
-                    if (voiceToText != null) {
+
+
+                    if (!TextUtils.isEmpty(voiceToText)) {
+                        mHandler.postDelayed(new Runnable() {
+                            @Override
+                            public void run() {
+                                InputConnection ic = getCurrentInputConnection();
+                                EditorInfo editorInfo = getCurrentInputEditorInfo();
+
+                                if (ic != null && editorInfo != null) {
+                                    String textToCommit = voiceToText;
+
+                                    CharSequence textBefore = ic.getTextBeforeCursor(1, 0);
+                                    if (textBefore != null && textBefore.length() > 0 && !textBefore.toString().equals(" ")) {
+                                        textToCommit = " " + textToCommit;
+                                    }
+
+                                    ic.commitText(textToCommit, 1);
+
+                                    int actionId = editorInfo.imeOptions & EditorInfo.IME_MASK_ACTION;
+                                    ic.performEditorAction(actionId);
+
+                                }
+                            }
+                        }, 200);
+
+
                         pendingVoiceText = voiceToText;
                     }
                     break;

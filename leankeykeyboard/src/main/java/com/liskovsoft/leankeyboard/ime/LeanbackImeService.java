@@ -466,20 +466,20 @@ public class LeanbackImeService extends KeyMapperImeService {
         if (pendingVoiceText != null && getCurrentInputConnection() != null) {
             // getCurrentInputConnection().deleteSurroundingText(Integer.MAX_VALUE, Integer.MAX_VALUE);
 
-            String text = pendingVoiceText;
-            InputConnection ic = getCurrentInputConnection();
-            if (ic != null) {
-
-                CharSequence textBefore = ic.getTextBeforeCursor(1, 0);
-                if (textBefore != null && textBefore.length() > 0 && !textBefore.toString().equals(" ")) {
-                    text = " " + text;
-                }
-
-                getCurrentInputConnection().commitText(text, 1);
+//            String text = pendingVoiceText;
+//            InputConnection ic = getCurrentInputConnection();
+//            if (ic != null) {
+//
+//                CharSequence textBefore = ic.getTextBeforeCursor(1, 0);
+//                if (textBefore != null && textBefore.length() > 0 && !textBefore.toString().equals(" ")) {
+//                    text = " " + text;
+//                }
+//
+//                getCurrentInputConnection().commitText(text, 1);
                 pendingVoiceText = null;
-                fetchAutocompleteSuggestions();
-                mContainer.focusActionButton();
-            }
+//                fetchAutocompleteSuggestions();
+//                mContainer.focusActionButton();
+//            }
         } else {
             int voiceKeyIndex = mContainer.findKeyIndexByCode(LeanbackKeyboardView.KEYCODE_VOICE);
             if (voiceKeyIndex != -1) {
